@@ -1,1 +1,1 @@
-var host_be = 'http://localhost/febe/perpus_backend/';
+var host_be ="http://localhost/perpus_backend/";

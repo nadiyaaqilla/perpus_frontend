@@ -2,27 +2,21 @@
     <div class="sidebar-sticky pt-3" style="background-color: #2A3F54;">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link text-white" href="?page=contoh">
-                    <i class="bi bi-file-earmark"></i>
-                    contoh
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-white" href="?page=dashboard">
+                <a class="nav-link text-white" href="?">
                     <i class="bi bi-house-door"></i>
                     Dashboard
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="?page=kategori">
+                <a class="nav-link text-white" href="">
                     <i class="bi bi-file-earmark"></i>
-                    kategori
+                    Kategori
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="?page=produk">
+                <a class="nav-link text-white" href="">
                     <i class="bi bi-cart"></i>
-                    produk
+                    Produk
                 </a>
             </li>
         </ul>
