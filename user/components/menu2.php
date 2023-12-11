@@ -16,7 +16,7 @@
                     <a class="nav-link" href="">Daftar Isi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Browse</a>
+                    <a class="nav-link" href="?page=search">Browse</a>
                 </li>
             </ul>
     </nav>
