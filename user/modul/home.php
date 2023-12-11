@@ -22,22 +22,8 @@
           <h4><strong>Buku Favorite</strong></h4>
         </div>
     </div>
-        <div class="row justify-content-around">
-            <div class="col-lg-2 konten1 d-flex justify-content-around">
-                <img src="img/5cm.jpg" alt="">
-            </div>
-            <div class="col-lg-2 konten1 d-flex justify-content-around">
-              <img src="img/pulang-pergi_tere_liye.jpeg" width="200px"; alt="">
-            </div>
-            <div class="col-lg-2 konten1 d-flex justify-content-around">
-                <img src="img/5cm.jpg" width="200px"; alt="">
-            </div>
-            <div class="col-lg-2 konten1 d-flex justify-content-around">
-              <img src="img/pulang-pergi_tere_liye.jpeg" width="200px"; alt="">
-            </div>
-            <div class="col-lg-2 konten1 d-flex justify-content-around">
-              <img src="img/5cm.jpg" width="200px"; alt="">
-          </div>
+        <div class="row justify-content-around" id="home-fav">
+            <!-- api -->
             
         </div>      
     </div>
