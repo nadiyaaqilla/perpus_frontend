@@ -2,7 +2,7 @@
     <div class="sidebar-sticky pt-3" style="background-color: #2A3F54;">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link text-white" href="?">
+                <a class="nav-link text-white" href="?page=dashboard">
                     <i class="bi bi-house-door"></i>
                     Dashboard
                 </a>
