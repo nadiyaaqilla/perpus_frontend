@@ -12,7 +12,7 @@
                 <a class="nav-link" href="">Home <span class="sr-only"></span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Daftar Isi</a>
+                <a class="nav-link" href="?page=daftar_isi">Daftar Isi</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="">Browse</a>
