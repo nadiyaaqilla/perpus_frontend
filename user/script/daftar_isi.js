@@ -1,7 +1,7 @@
 $(function () {
     $.ajax({
         type: 'GET',
-        url: host_be/'read_produk.php',
+        url: host_be+'read_produk.php',
         dataType: 'json',
         success: function (data) {
             if (data.status === 200) {
