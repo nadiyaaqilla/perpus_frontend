@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     // Menggunakan jQuery AJAX untuk mengambil data dari backend
     $.ajax({
-      url: host_be/'menu_admin.php',
+      url: host_be+'read_produk.php',
       type: 'GET',
       dataType: 'json',
       success: function (response) {
