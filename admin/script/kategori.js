@@ -3,7 +3,7 @@ $(document).ready(function () {
     function fetchData() {
       $.ajax({
         type: 'GET',
-        url: host_be+'read_produk,php', // Create a new PHP file to fetch data
+        url: 'fetch_kategori.php', // Create a new PHP file to fetch data
         dataType: 'json',
         success: function (response) {
           if (response.status === 'success') {
