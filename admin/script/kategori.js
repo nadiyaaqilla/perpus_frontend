@@ -38,7 +38,7 @@ $(document).ready(function () {
       // Send an AJAX request to the backend PHP script
       $.ajax({
         type: 'POST',
-        url: 'insert_kategori.php',
+        url: host_be+'read_produk.php',
         data: formData,
         dataType: 'json',
         success: function (response) {
