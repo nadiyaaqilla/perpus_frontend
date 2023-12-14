@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $.ajax({
-        url: 'be/co.php',
+        url: host_be+'read_produk.php',
         type: 'GET',
         dataType: 'json',
         success: function(response) {
@@ -14,8 +14,8 @@ $(document).ready(function() {
                 
                         var bookHtml = `
                             <div class="col-lg-2 konten1 d-flex justify-content-around">
-                                <a href="produk.html?isbn=${book.isbn_bk}" id="cov-bk">
-                                <img class="img-fav" src="img/${book.cover_bk}" value="${book.isbn_bk}">
+                                <a href="?page=produk&&isbn=${book.isbn_bk}" id="cov-bk">
+                                <img class="img-fav" src="../assets/img/${book.cover_bk}" value="${book.isbn_bk}">
                                 </a>
                             </div>
                            `;
@@ -65,13 +65,6 @@ $(document).ready(function() {
     });
 
 
-    $('#searchTerm').click(function() {
-        // Get the value of the clicked button
-        var cari = $(this).val();
-
-        // Redirect to kategori.html with the selected category as a query parameter
-        window.location.href = 'search.html?cari=' + encodeURIComponent(cari);
-    });
     $('.btn-cat').click(function() {
         // Get the value of the clicked button
         var category = $(this).val();
