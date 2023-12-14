@@ -34,7 +34,7 @@ $(document).ready(function() {
 
     
     $.ajax({
-        url: host_be/'read_produk.php',
+        url: host_be+'read_produk.php',
         type: 'GET',
         dataType: 'json',
         success: function(response) {
