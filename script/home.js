@@ -15,7 +15,7 @@ $(document).ready(function() {
                         var bookHtml = `
                             <div class="col-lg-2 konten1 d-flex justify-content-around">
                                 <a href="?page=produk&&isbn=${book.isbn_bk}" id="cov-bk">
-                                <img class="img-fav" src="../assets/img/${book.cover_bk}" value="${book.isbn_bk}">
+                                <img class="img-fav" src="assets/img/${book.cover_bk}" value="${book.isbn_bk}">
                                 </a>
                             </div>
                            `;

@@ -18,7 +18,7 @@ $(function () {
                     $('#daftar-isi').append(
                         '<div class="col-md-3 konten1 d-flex justify-content-center">' +
                         '<a href="?page=produk&isbn='+ isbn+'">'+
-                        '<img src="../assets/img/' + cover + '" alt=""></a>' +
+                        '<img src="assets/img/' + cover + '" alt=""></a>' +
                         '</div>' +
                         '<div class="col-md-3 konten1">' +
                         '<p><strong><a href="?page=produk&isbn='+ isbn+'" style="color: inherit;text-decoration: none;">' + judul + '</a></strong><br>' + kategori + '<br><br><br>' + truncatedSinop + '</p>' +
