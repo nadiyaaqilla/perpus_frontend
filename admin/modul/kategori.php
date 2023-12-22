@@ -20,8 +20,8 @@
                       <td >
                       <form id="insert_kategori">
                         <p>Kategori Baru</p>
-                        <input type="text" name="nama_kategori" class="form-control" style="border: 2xp;" placeholder="Input kategori...">
-                        <button type="submit" name="submit" class="btn text-white mt-3" style="background-color: #2A3F54; float:right;"><b style="color: #1ABB9C;">Tambahkan</b></button>
+                        <input type="text" name="nama" class="form-control" style="border: 2xp;" placeholder="Input kategori...">
+                        <button type="submit" class="btn text-white mt-3" style="background-color: #2A3F54; float:right;"><b style="color: #1ABB9C;">Tambahkan</b></button>
                       </form>
                       </td>
                     </tr>
