@@ -59,7 +59,7 @@ $(document).ready(function () {
         dataType: "json",
         success: (result) => {
           alert(result.msg);
-          bookData();
+          window.location.reload();
         },
       });
     })
