@@ -1,19 +1,24 @@
  <!-- Main content -->
+ <?php
+$koneksi = mysqli_connect('localhost', 'root', '', 'e-perpus');
+// Query untuk menghitung jumlah data di tabel data_buku
+$sql = "SELECT COUNT(*) AS total_buku FROM data_buku";
+$result = $koneksi->query($sql);
+$row = $result->fetch_assoc();
+    $total_buku = $row['total_buku'];
+?>
  <div class="col">
  <div class="container-fluid">
                       <div class="row mt-5">
                         <div class="col-4" style="text-align:center;vertical-align:middle;">
                           <span><i class="bi bi-file-earmark-text-fill"></i></i></i> Total Buku</span>
-                          <div>25</div>
+                          <div><?php echo $total_buku; ?></div>
                         </div>
-                        <div class="col-4" style="text-align:center;vertical-align:middle;">
-                          <span><i class="bi bi-person-fill"></i></i> Total User</span>
-                          <div>2</div>
-                        </div>
-                        <div class="col-4" style="text-align:center;vertical-align:middle;">
+                        
+                        <!-- <div class="col-4" style="text-align:center;vertical-align:middle;">
                           <span><i class="bi bi-calendar-check-fill"></i></i> Total Download</span>
                           <div class="ml-4" style="color: #1ABB9C; font-weight: bold;">5</div>
-                        </div>
+                        </div> -->
                       </div>
                     </div>
                   
@@ -23,7 +28,7 @@
 
            <!-- tombol search -->
           
-           <div class="row x_title">
+           <!-- <div class="row x_title">
             <div class="col-md-6">
             </div>
           <div class="col-md-3 col-sm-3 col-xs-12 form-group pull-right top_search" style="margin-left: 220px; ">
@@ -35,9 +40,9 @@
               </span>
             </form>
             </div>
+          </div> -->
           </div>
-          </div>
-        </main>
+        </main><br><br>
     <!-- konten -->
   
 
@@ -57,7 +62,7 @@
             <th class="col">Penulis</th>
             <th class="col">Sinopsis</th>
             <th class="col">File</th>
-            <th class="col">Unduhan</th>
+            <!-- <th class="col">Unduhan</th> -->
             <th class="col">Action</th>
           </tr>
         </thead>
