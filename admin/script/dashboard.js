@@ -12,7 +12,7 @@ $(document).ready(function () {
                   function displayBookData(bookData) {                
                       var tableBody = $('#table-body');
                   
-                      for (var i = 0; i < Math.min(bookData.length, 26); i++) {
+                      for (var i = 0; i < Math.min(bookData.length, 30); i++) {
                           var book = bookData[i];
                           var no = i + 1;
                           var sinopSingkat = book.sinop_bk.length > 90 ? book.sinop_bk.substring(0, 90) + "..." : book.sinop_bk;
@@ -21,17 +21,17 @@ $(document).ready(function () {
                           var bookHtml = `
                           <tr justify-content-center>
                             <td>${no}</td>
-                            <td><img src="../file/img/${book.cover_bk}" style="width: 50px;"></td>
+                            <td><img src="${host_be}file/img/${book.cover_bk}" style="width: 50px;"></td>
                             <td>${book.isbn_bk}</td>
                             <td style="width: 50px;">${judulSingkat}</td>
-                            <td>${book.nama_kategori}</td>
+                            <td>${book.kode}</td>
                             <td>${book.penulis_bk}</td>
                             <td>${sinopSingkat}</td>
-                            <td a href="../file/${book.file_bk}">${judulSingkat}.pdf</td>
-                            <td>${book.jml_dwn_bk}</td>
+                            <td><a href="${host_be}file/${book.file_bk}" target="_blank">${judulSingkat}.pdf</a></td>
+                            
                             <td>
-                            <a href="edit_admin.html"><i class="bi bi-pencil-fill"></i></a>
-                            <a href="hapus-bk.php?isbn=${book.isbn_bk}"><i class="bi bi-trash-fill" style="color: red;"></i></a>
+                            <a href="?page=edit_produk&&isbn=${book.isbn_bk}"><i class="bi bi-pencil-fill"></i></a>
+                            <a class="delete" key="isbn=${book.isbn_bk}"><i class="bi bi-trash-fill" style="color: red;"></i></a>
                             </td>
                           </tr>
                           ${no}++;
@@ -46,5 +46,22 @@ $(document).ready(function () {
         console.log('Error: ' + error);
       },
     });
+    $('body').on('click','a.delete', function(){
+      var key = $(this).attr('key');
+      console.log(key);
+      $.ajax({
+        type: "GET",
+        url: host_be+"hapus-bk.php",
+        data: key,
+        cache: false,
+        contentType: false,
+        processData: false,
+        dataType: "json",
+        success: (result) => {
+          alert(result.msg);
+          window.location.reload();
+        },
+      });
+    })
   });
   
