@@ -1,4 +1,26 @@
 $(document).ready(function () {
+  function getTotalData() {
+    $.ajax({
+        url: host_be +'total_produk.php',
+        type: 'GET',
+        dataType: 'json',
+        success: function(response) {
+            // Menampilkan total data di elemen dengan id 'totalData'
+            $('#total-buku').append(`<div>${response.body.total}</div>`);
+            console.log(response.body.total);
+        },
+        error: function(error) {
+            console.log('Error:', error);
+        }
+    });
+}
+
+// Panggil fungsi untuk mendapatkan total data saat halaman dimuat
+$(document).ready(function() {
+    getTotalData();
+});
+
+
 
     // Menggunakan jQuery AJAX untuk mengambil data dari backend
     $.ajax({
