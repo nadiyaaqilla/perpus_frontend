@@ -1,6 +1,6 @@
 $(document).ready(function () {
     function updateUrl(searchTerm) {
-        var newUrl = window.location.pathname + '?cari=' + encodeURIComponent(searchTerm);
+        var newUrl = window.location.pathname + '?search=' + encodeURIComponent(searchTerm);
         window.history.pushState({ path: newUrl }, '', newUrl);
     }
 
@@ -17,7 +17,7 @@ $(document).ready(function () {
             $.ajax({
                 type: 'GET',
                 url: host_be+'cari.php',
-                data: { cari: newSearchTerm },
+                data: { search: newSearchTerm },
                 dataType: 'json',
                 success: function (response) {
                     console.log('Success: ', response);
@@ -32,11 +32,11 @@ $(document).ready(function () {
                         for (var i = 0; i < response.body.data.length; i++) {
                             var item = response.body.data[i];
                             var newItem = $('<div class="col-lg-4 konten1 d-flex justify-content-center">' +
-                                '<img src="../assets/img/' + item.cover_bk + '">' +
+                                '<img src="'+host_be+'file/img/' + item.cover_bk + '">' +
                                 '</div>' +
                                 '<div class="col-lg-8 konten1">' +
-                                '<p><strong><a href="?page=produk&isbn='+item.isbn_bk+'" style="color: inherit;text-decoration: none;">' + item.judul_bk + '</a></strong><br>' + 
-                                item.nama_kategori + '<br><br><br>' +
+                                '<p><strong><a href="?page=produk&&isbn='+item.isbn_bk+'" style="color: inherit;text-decoration: none;">' + item.judul_bk + '</a></strong><br>' + 
+                                item.kode + '<br><br><br>' +
                                 item.sinop_bk +
                                 '</p>' +
                                 '</div>');
