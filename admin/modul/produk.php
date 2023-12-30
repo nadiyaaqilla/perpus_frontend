@@ -16,7 +16,7 @@
                       <tr>
                         <td>
                           <div class="container">
-                            <form action="produk_admin.php" method="post" enctype="multipart/form-data">
+                            <form id="insert-produk" method="post" enctype="multipart/form-data">
                               <div class="row">
                                 <div class="col-25">
                                   <label for="">Cover</label>
@@ -45,23 +45,29 @@
                               </div>
                               <div class="row">
                                 <div class="col-25">
+                                  <label for="">Penulis</label>
+                                </div>
+                                <div class="col-75">
+                                  <input class="form-control" type="text" name="penulis_bk">
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-25">
                                   <label for="">Kategori</label>
                                 </div>
                                 <div class="col-75">
-                                  <select name="nama_kategori">
-                                    <option value=""></option>
-                                    <option value="pendidikan">Pendidikan</option>
-                                    <option value="cerpen">Cerpen</option>
-                                    <option value="novel">Novel</option>
+                                  <select name="kode" id="kode_kategori">                    
+                                    <!-- Api -->
                                   </select>
                                 </div>
+                               
                               </div>
                               <div class="row">
                                 <div class="col-25">
                                   <label for="">Sinopsis</label>
                                 </div>
                                 <div class="col-75">
-                                  <textarea name="sinop_bk" value="" style="height:100px"></textarea>
+                                  <textarea name="sinop_bk" style="height:100px"></textarea>
                                 </div>
                               </div>
                               <div class="row">
@@ -76,7 +82,7 @@
                               </div>
                               <br>
                               <div class="row float-right">
-                                <button class="btn text-white mt-1" name="submit" type="submit" style="background-color: #2A3F54;"><a style="color: #1ABB9C">Tambahkan</a></button>
+                                <button class="btn text-white mt-1" type="submit" style="background-color: #2A3F54;"><a style="color: #1ABB9C">Tambahkan</a></button>
                               </div>
                               
                             </form>
