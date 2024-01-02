@@ -1,12 +1,5 @@
 $(document).ready(function() {
-    // Attach click event handler to all buttons with the class 'category-btn'
-    $('.category-btn').click(function() {
-        // Get the value of the clicked button (category)
-        var category = $(this).val();
-
-        // Redirect to home.html with the selected category as a query parameter
-        window.location.href = 'home.html?category=' + encodeURIComponent(category);
-    });
+ 
 
     // Fetch and display data based on the category parameter in the URL
     var urlParams = new URLSearchParams(window.location.search);
@@ -17,13 +10,13 @@ $(document).ready(function() {
 
     // Fetch and display data based on the category (you'll need to implement this part)
     $.ajax({
-        url: 'be/co.php',
+        url: host_be+'read_produk.php',
         type: 'GET',
         dataType: 'json',
         success: function(response) {
             if (response.status === 200) {
                 // Filter data based on the selected category
-                var filteredData = response.body.data.filter(book => book.nama_kategori === category);
+                var filteredData = response.body.data.filter(book => book.kode === category);
                 
                 // Display the filtered data
                 displayBookData(filteredData);
@@ -32,8 +25,8 @@ $(document).ready(function() {
                     var isiKategori = $('#isi-kategori');
                     isiKategori.empty();
             
-                    // Sort the bookData array by the 'nama_kategori' property
-                    bookData.sort((a, b) => a.nama_kategori.localeCompare(b.nama_kategori));
+                    // Sort the bookData array by the 'kode' property
+                    bookData.sort((a, b) => a.kode.localeCompare(b.kode));
             
                     for (var i = 0; i < Math.min(bookData.length, 10); i++) {
                         var book = bookData[i];
@@ -43,15 +36,15 @@ $(document).ready(function() {
             
                         var bookHtml = `
                             <div class="col-md-3 konten1 d-flex justify-content-center">
-                            <a href="produk.html?isbn=${book.isbn_bk}" id="pro-dwl" value="${book.isbn_bk}">
-                            <img src="img/${book.cover_bk}" style="width: 160px;" alt="">
+                            <a href="?page=produk&&isbn=${book.isbn_bk}" id="pro-dwl" value="${book.isbn_bk}">
+                            <img src="${host_be}file/img/${book.cover_bk}" style="width: 160px;" alt="">
                             </a>
                                 
                             </div>
                             <div class="col-md-3 konten1">
-                                <p><strong><a href="produk.html?isbn=${book.isbn_bk}" id="pro-dwl" value="${book.isbn_bk}"
+                                <p><strong><a href="?page=produk&&isbn=${book.isbn_bk}" id="pro-dwl" value="${book.isbn_bk}"
                                  style="color: inherit;text-decoration: none;">${book.judul_bk}</a></strong><br>
-                                ${book.nama_kategori} <br><br><br>
+                                ${book.kode} <br><br><br>
                                 ${truncatedSinop}
                                 </p>
                             </div>`;
@@ -67,19 +60,5 @@ $(document).ready(function() {
             console.error('AJAX Error:', status, error);
         }
     });
-
-    
-    // $('a#pro-dwl').click(function(event) {
-    //     event.preventDefault(); // Prevent the default behavior of the anchor tag
-    
-    //     // Get the href attribute of the clicked anchor tag
-    //     var href = $(this).attr('href');
-    
-    //     // Extract the ISBN from the href
-    //     var isbn = getParameterByName('isbn', href);
-    
-    //     // Redirect to produk.html with the selected ISBN as a query parameter
-    //     window.location.href = 'produk.html?isbn=' + encodeURIComponent(isbn);
-    // });
      
 });
