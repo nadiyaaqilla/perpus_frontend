@@ -36,15 +36,11 @@
       </div>
       <!-- button category -->
       <div class="row" id="home-kat">
-        <?php
-            $koneksi = mysqli_connect('localhost', 'root', '', 'e-perpus');
-            $query = mysqli_query($koneksi, "SELECT * FROM kategori");
-            while ($row = mysqli_fetch_array($query)) {
-            ?>
+       
           <div class="col-lg-3 konten2 d-flex justify-content-around">
             <button type="button" class="btn btn-info btn-cat" value="<?php echo $row['nama']; ?>"><?php echo $row['nama']; ?></button> 
           </div>
-          <?php } ?>
+          
          
       </div>
    </div>
