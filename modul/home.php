@@ -19,7 +19,7 @@
     <div class="container mt-4">
       <div class="row">
         <div class="col subkat">
-          <h4><strong>Buku Favorite</strong></h4>
+          <h4><strong>Buku Baru</strong></h4>
         </div>
     </div>
         <div class="row justify-content-around" id="home-fav">
@@ -28,7 +28,7 @@
         </div>      
     </div>
     <!-- kategori -->
-    <div class="container mt-4 cont-cate">
+    <div class="container mt-4 cont-cate" style="height: auto;">
       <div class="row">
           <div class="col subkat">
             <h4><strong>Kategori Buku</strong></h4>
@@ -36,17 +36,11 @@
       </div>
       <!-- button category -->
       <div class="row" id="home-kat">
-        <div class="col-lg-3 konten2 d-flex justify-content-around">
-          <button type="button" class="btn btn-info btn-cat" value="Novel">Novel</button>
-        </div>
-        <div class="col-lg-3 konten2 d-flex justify-content-around">
-          <button type="button" class="btn btn-info btn-cat" value="Komik">Komik</button>
-        </div>
-        <div class="col-lg-3 konten2 d-flex justify-content-around">
-          <button type="button" class="btn btn-info btn-cat" value="Non-Fiksi">Non-Fiksi</button>
-        </div>
-        <div class="col-lg-3 konten2 d-flex justify-content-around">
-          <button type="button" class="btn btn-info btn-cat" value="Pelajaran">Pelajaran</button>
-        </div>
+       
+          <div class="col-lg-3 konten2 d-flex justify-content-around">
+            <!-- Api -->
+          </div>
+          
+         
       </div>
-    </div>
+   </div>
