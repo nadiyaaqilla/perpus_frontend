@@ -38,7 +38,7 @@
       <div class="row" id="home-kat">
        
           <div class="col-lg-3 konten2 d-flex justify-content-around">
-            <button type="button" class="btn btn-info btn-cat" value="<?php echo $row['nama']; ?>"><?php echo $row['nama']; ?></button> 
+            <!-- Api -->
           </div>
           
          
