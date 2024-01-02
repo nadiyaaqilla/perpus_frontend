@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    alert('data tampil');
     $.ajax({
         url: host_be+'read_produk.php',
         type: 'GET',
@@ -66,7 +67,7 @@ $(document).ready(function() {
     //         console.error('AJAX Error:', status, error);
     //     }
     // });
-
+    
 
     $('.btn-cat').click(function() {
         // Get the value of the clicked button
@@ -82,4 +83,28 @@ $(document).ready(function() {
         // Redirect to kategori.html with the selected category as a query parameter
         window.location.href = '?page=produk&&isbn=' + encodeURIComponent(cover);
     });
+});
+$.ajax({
+    type: 'GET',
+    url: host_be + "read_kategori.php",
+    cache: false,
+    contentType: false, 
+    processData: false, 
+    dataType: 'json',
+    success: (result) => {
+        // Clear existing options in the dropdown
+        $('#home-kat').empty();
+
+        // Add an empty/default option
+        $('#home-kat').append();
+
+        // Loop through the data and append options to the dropdown
+        result.data.forEach((item) => {
+            $('#home-kat').append(`
+            <div class="col-lg-3 konten2 d-flex justify-content-around">
+            <button type="button" class="btn btn-info btn-cat" value="${item.nama}">${item.nama}</button> 
+          </div>
+            `);
+        });
+    },
 });
