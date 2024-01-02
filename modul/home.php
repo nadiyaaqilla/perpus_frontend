@@ -38,7 +38,7 @@
       <div class="row" id="home-kat">
        
           <div class="col-lg-3 konten2 d-flex justify-content-around">
-            <!-- Api -->
+            <button type="button" class="btn btn-info btn-cat"></button> 
           </div>
           
          
