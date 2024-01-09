@@ -1,3 +1,20 @@
+<?php 
+
+if (isset($_REQUEST['page']) && !empty($_REQUEST['page'])) {
+    // Check if 'page' is a valid and expected value (add more conditions if needed)
+    $validPages = array('home', 'daftar_isi', 'kategori', 'produk', 'search'); // Add valid pages
+    if (!in_array($_REQUEST['page'], $validPages)) {
+        // Invalid 'page' value, redirect to dashboard
+        header("location:?page=home");
+        exit();
+    }
+} else {
+    // 'page' parameter not set or empty, redirect to dashboard
+    header("location:?page=home");
+    exit();
+}
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,7 +26,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <title>Kategori</title>
+    <script src="env.js"></script>
+    <title><?= $_REQUEST['page'] ?></title>
   </head>
   <body>
     
