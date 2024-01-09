@@ -21,11 +21,6 @@ $(document).ready(function () {
                   '<a class="delete" key="kode='+ item.kode +'"><i class="bi bi-trash-fill" id="btnDel" style="color: red;"></i></a></td></tr>'
               );
               $("#data_kat").append(row);
-              // var btn = " <input type='button' id='btnDel' value='Delete' />";
-  
-             //set value of
-  
-              // $("#btnDel").attr("id", "btnDel" + $("#hid").attr("value"));
             });
           } else {
             console.error("Error fetching data: " + response.message);
@@ -39,7 +34,7 @@ $(document).ready(function () {
   
     $('body').on('click','a.delete', function(){
       var key = $(this).attr('key');
-      console.log(key);
+      if (confirm("Yakin ingin hapus data dengan " + key  + "?")) {
       $.ajax({
         type: "GET",
         url: host_be+"hapus-kat.php",
@@ -53,13 +48,16 @@ $(document).ready(function () {
           Parsingdata();
         },
       });
+    }
     })
   
-   
+    
+
   
     $("#insert_kategori").submit(function (e) {
       e.preventDefault();
       var formData = new FormData(this);
+      console.log(formData);
       $.ajax({
         type: "POST",
         url: host_be+"insert_kategori.php",
