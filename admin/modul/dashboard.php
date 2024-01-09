@@ -1,4 +1,5 @@
  <!-- Main content -->
+<<<<<<< HEAD
  <?php
 $koneksi = mysqli_connect('localhost', 'root', '', 'e-perpus');
 // Query untuk menghitung jumlah data di tabel data_buku
@@ -7,11 +8,15 @@ $result = $koneksi->query($sql);
 $row = $result->fetch_assoc();
     $total_buku = $row['total_buku'];
 ?>
+=======
+
+>>>>>>> d8813cee45ee81c588dd9208d2d0e953da6adacd
  <div class="col">
  <div class="container-fluid">
                       <div class="row mt-5">
                         <div class="col-4" style="text-align:center;vertical-align:middle;">
                           <span><i class="bi bi-file-earmark-text-fill"></i></i></i> Total Buku</span>
+<<<<<<< HEAD
                           <div><?php echo $total_buku; ?></div>
                         </div>
                         
@@ -41,6 +46,14 @@ $row = $result->fetch_assoc();
             </form>
             </div>
           </div> -->
+=======
+                          <div class="total-buku" id="total-buku"></div>
+                        </div>
+           
+                      </div>
+                    </div>
+                  
+>>>>>>> d8813cee45ee81c588dd9208d2d0e953da6adacd
           </div>
         </main><br><br>
     <!-- konten -->

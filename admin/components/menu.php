@@ -8,13 +8,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="">
+                <a class="nav-link text-white" href="?page=kategori">
                     <i class="bi bi-file-earmark"></i>
                     Kategori
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white" href="">
+                <a class="nav-link text-white" href="?page=produk">
                     <i class="bi bi-cart"></i>
                     Produk
                 </a>

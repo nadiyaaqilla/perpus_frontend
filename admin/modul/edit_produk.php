@@ -15,15 +15,16 @@
                     <tbody>
                       <tr>
                         <td>
+                       
                           <div class="container">
-                            <form id="insert-produk" method="post" enctype="multipart/form-data">
-                              <div class="row">
+                            <form id="edit-produk">
+                              <div class="row">                              
                                 <div class="col-25">
                                   <label for="">Cover</label>
                                 </div>
                                 <div class="col-75">
                                   <div class="custom-file ">
-                                    <input type="file" name="cover_bk" required="required" class="form-control">
+                                    <input type="file" name="cover_bk" class="form-control" id="cover_bk">
                                 </div>
                                 </div>
                               </div>
@@ -32,7 +33,7 @@
                                   <label for="">Judul</label>
                                 </div>
                                 <div class="col-75">
-                                  <input class="form-control" type="text" name="judul_bk">
+                                  <input class="form-control" type="text" name="judul_bk" id="judul_bk">
                                 </div>
                               </div>
                               <div class="row">
@@ -40,7 +41,7 @@
                                   <label for="">ISBN</label>
                                 </div>
                                 <div class="col-75">
-                                  <input class="form-control" type="text" name="isbn_bk">
+                                  <input class="form-control" type="text" id="isbn" name="isbn_bk" readonly>
                                 </div>
                               </div>
                               <div class="row">
@@ -48,7 +49,7 @@
                                   <label for="">Penulis</label>
                                 </div>
                                 <div class="col-75">
-                                  <input class="form-control" type="text" name="penulis_bk">
+                                  <input class="form-control" type="text" name="penulis_bk" id="penulis_bk">
                                 </div>
                               </div>
                               <div class="row">
@@ -56,8 +57,8 @@
                                   <label for="">Kategori</label>
                                 </div>
                                 <div class="col-75">
-                                  <select name="kode" id="kode_kategori">                    
-                                    <!-- Api -->
+                                  <select name="kode" id="kode_kategori">
+                                  
                                   </select>
                                 </div>
                                
@@ -67,7 +68,7 @@
                                   <label for="">Sinopsis</label>
                                 </div>
                                 <div class="col-75">
-                                  <textarea name="sinop_bk" style="height:100px"></textarea>
+                                  <textarea name="sinop_bk" id="sinop_bk" style="height:100px"></textarea>
                                 </div>
                               </div>
                               <div class="row">
@@ -76,7 +77,7 @@
                                 </div>
                                 <div class="col-75 input-group">
                                   <div class="custom-file ">
-                                    <input type="file" name="file_bk" required="required" class="form-control">
+                                    <input type="file" name="file_bk" class="form-control" id="file_bk">                                    
                                 </div>
                                 </div>
                               </div>
