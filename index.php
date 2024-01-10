@@ -1,5 +1,4 @@
 <?php 
-
 if (isset($_REQUEST['page']) && !empty($_REQUEST['page'])) {
     // Check if 'page' is a valid and expected value (add more conditions if needed)
     $validPages = array('home', 'daftar_isi', 'kategori', 'produk', 'search'); // Add valid pages
@@ -18,6 +17,7 @@ if (isset($_REQUEST['page']) && !empty($_REQUEST['page'])) {
 <!doctype html>
 <html lang="en">
   <head>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,6 +28,7 @@ if (isset($_REQUEST['page']) && !empty($_REQUEST['page'])) {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <script src="env.js"></script>
     <title><?= $_REQUEST['page'] ?></title>
+    
   </head>
   <body>
     
