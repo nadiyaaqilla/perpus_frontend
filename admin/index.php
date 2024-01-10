@@ -1,3 +1,20 @@
+<?php 
+
+if (isset($_REQUEST['page']) && !empty($_REQUEST['page'])) {
+    // Check if 'page' is a valid and expected value (add more conditions if needed)
+    $validPages = array('dashboard', 'edit_produk', 'kategori', 'editkategori', 'produk'); // Add valid pages
+    if (!in_array($_REQUEST['page'], $validPages)) {
+        // Invalid 'page' value, redirect to dashboard
+        header("location:?page=dashboard");
+        exit();
+    }
+} else {
+    // 'page' parameter not set or empty, redirect to dashboard
+    header("location:?page=dashboard");
+    exit();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +24,7 @@
     <meta name="description" content="" />
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
     <meta name="generator" content="Hugo 0.101.0" />
-    <title>Dashboard Template · Bootstrap v4.6</title>
+    <title><?= $_REQUEST['page'] ?></title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/dashboard/" />
 
