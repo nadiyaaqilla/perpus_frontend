@@ -15,7 +15,6 @@ $(document).ready(function() {
     // Check if isbn is null
     if (isbn === null) {
         console.error('Error: ISBN parameter is null.');
-        console.log('URL:', window.location.href);
         // Handle the situation where ISBN is null, for example, display a message or redirect
     } else {
 
@@ -71,6 +70,5 @@ function displayBookData(bookData) {
 
         // Append the HTML content to the #dwl-produk element
         dwlProduk.append(htmlContent);
-        console.log(displayBookData);
     }
 }

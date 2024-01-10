@@ -57,7 +57,6 @@ $(document).ready(function () {
     $("#insert_kategori").submit(function (e) {
       e.preventDefault();
       var formData = new FormData(this);
-      console.log(formData);
       $.ajax({
         type: "POST",
         url: host_be+"insert_kategori.php",
