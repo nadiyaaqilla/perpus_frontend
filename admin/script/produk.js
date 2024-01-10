@@ -1,22 +1,3 @@
-$('#insert-produk').submit(function(e){
-    e.preventDefault();
-    var formData = new FormData(this);
-    console.log(formData);
-    $.ajax({
-        type: 'POST',
-        url: host_be + "insert_produk.php",
-        data: formData,
-        cache: false,
-        contentType: false, 
-        processData: false, 
-        dataType: 'json',
-        success: (result) => {
-            alert(result.msg);
-            window.location.href = "?page=dashboard";
-        },
-    });
-});
-
 $.ajax({
     type: 'GET',
     url: host_be + "read_kategori.php",
@@ -39,3 +20,26 @@ $.ajax({
         });
     },
 });
+
+
+$('#insert-produk').submit(function(e){
+    e.preventDefault();
+    var formData = new FormData(this);
+    console.log(formData);
+    $.ajax({
+        type: 'POST',
+        url: host_be + "insert_produk.php",
+        data: formData,
+        cache: false,
+        contentType: false, 
+        processData: false, 
+        dataType: 'json',
+        success: (result) => {
+            alert(result.msg);
+            
+        },
+    });
+    window.location.href = "?page=dashboard";
+});
+
+

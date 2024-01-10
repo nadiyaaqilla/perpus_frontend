@@ -67,7 +67,7 @@
                                   <label for="">Sinopsis</label>
                                 </div>
                                 <div class="col-75">
-                                  <textarea name="sinop_bk" style="height:100px"></textarea>
+                                  <textarea name="sinop_bk" value="" style="height:100px"></textarea>
                                 </div>
                               </div>
                               <div class="row">

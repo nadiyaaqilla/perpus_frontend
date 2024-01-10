@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    alert('data tampil');
     $.ajax({
         url: host_be+'read_produk.php',
         type: 'GET',
@@ -92,11 +91,8 @@ $.ajax({
     processData: false, 
     dataType: 'json',
     success: (result) => {
-        // Clear existing options in the dropdown
-        $('#home-kat').empty();
-
-        // Add an empty/default option
-        $('#home-kat').append();
+     $('#home-kat').empty();
+     $('#home-kat').append();
 
         // Loop through the data and append options to the dropdown
         result.data.forEach((item) => {

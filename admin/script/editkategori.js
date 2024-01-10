@@ -39,7 +39,6 @@ $.ajax({
   processData: false,
   dataType: 'json',
   success: function (result){
-    console.log(result);
       // Clear existing options in the dropdown
       $('#edit_kategori').empty();
 

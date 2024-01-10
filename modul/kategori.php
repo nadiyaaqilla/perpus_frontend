@@ -4,7 +4,6 @@
     <div class="container mt-3">
         <div class="row justify-content-center" id="isi-kategori">
             <!-- API -->
-            
         </div>
         
     </div>

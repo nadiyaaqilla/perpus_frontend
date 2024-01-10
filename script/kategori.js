@@ -1,5 +1,12 @@
 $(document).ready(function() {
- 
+    // // Attach click event handler to all buttons with the class 'category-btn'
+    // $('.category-btn').click(function() {
+    //     // Get the value of the clicked button (category)
+    //     var category = $(this).val();
+
+    //     // Redirect to home.html with the selected category as a query parameter
+    //     window.location.href = 'home.html?category=' + encodeURIComponent(category);
+    // });
 
     // Fetch and display data based on the category parameter in the URL
     var urlParams = new URLSearchParams(window.location.search);
@@ -60,5 +67,19 @@ $(document).ready(function() {
             console.error('AJAX Error:', status, error);
         }
     });
+
+    
+    // $('a#pro-dwl').click(function(event) {
+    //     event.preventDefault(); // Prevent the default behavior of the anchor tag
+    
+    //     // Get the href attribute of the clicked anchor tag
+    //     var href = $(this).attr('href');
+    
+    //     // Extract the ISBN from the href
+    //     var isbn = getParameterByName('isbn', href);
+    
+    //     // Redirect to produk.html with the selected ISBN as a query parameter
+    //     window.location.href = 'produk.html?isbn=' + encodeURIComponent(isbn);
+    // });
      
 });

@@ -1,6 +1,6 @@
 $(document).ready(function () {
     function updateUrl(searchTerm) {
-        var newUrl = window.location.pathname + '?search=' + encodeURIComponent(searchTerm);
+        var newUrl = window.location.pathname + '?page=search&&cari=' + encodeURIComponent(searchTerm);
         window.history.pushState({ path: newUrl }, '', newUrl);
     }
 

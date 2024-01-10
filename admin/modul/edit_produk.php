@@ -83,7 +83,7 @@
                               </div>
                               <br>
                               <div class="row float-right">
-                                <button class="btn text-white mt-1" type="submit" style="background-color: #2A3F54;"><a style="color: #1ABB9C">Tambahkan</a></button>
+                                <button class="btn text-white mt-1" type="submit" style="background-color: #2A3F54;"><a style="color: #1ABB9C">Edit</a></button>
                               </div>
                               
                             </form>

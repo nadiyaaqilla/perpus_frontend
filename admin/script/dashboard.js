@@ -92,7 +92,6 @@ $(document).ready(function () {
       }
        // Update table after successful deletion
       ParsingData();
-      
       location.reload();
   });
 });

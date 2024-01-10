@@ -18,16 +18,15 @@ $(document).ready(function() {
         console.log('URL:', window.location.href);
         // Handle the situation where ISBN is null, for example, display a message or redirect
     } else {
-        console.log('ISBN:', isbn); // Log the retrieved ISBN for debugging
 
         // Fetch additional data using AJAX
         $.ajax({
-            url: host_be+'produk_dwl.php', // API
+            url: host_be+'produk_dwl.php?isbn=' +isbn, // API
             type: 'GET',
             data: { isbn: isbn }, // Pass the ISBN as a parameter to the server
             dataType: 'json',
             success: function(response) {
-                if (response.status === 200) {                    
+                if (response.status === 200) {
                     displayBookData(response.body.data);
                    
                 } else {
@@ -40,14 +39,11 @@ $(document).ready(function() {
         });
     }
 });
-  
+
 function displayBookData(bookData) {
     // Build the HTML content based on the server response
     var dwlProduk = $('#dwl-produk');
     dwlProduk.empty();
-
-    // Sort the bookData array by the 'isbn_bk' property
-    bookData.sort((a, b) => a.isbn_bk.localeCompare(b.isbn_bk));
 
     for (var i = 0; i < Math.min(bookData.length, 10); i++) {
         var book = bookData[i];
@@ -75,6 +71,6 @@ function displayBookData(bookData) {
 
         // Append the HTML content to the #dwl-produk element
         dwlProduk.append(htmlContent);
-        console.log(htmlContent);
+        console.log(displayBookData);
     }
 }
