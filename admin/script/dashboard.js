@@ -27,7 +27,7 @@ $(document).ready(function () {
               }
           },
           error: function (error) {
-              console.log('Error: ' + error);
+              
           },
       });
   }
@@ -74,7 +74,6 @@ $(document).ready(function () {
   $('body').on('click', 'a.delete', function (e) {
       e.preventDefault();
       var key = $(this).attr('key');
-      console.log(key);
       if (confirm("Yakin ingin hapus data dengan " + key + "?")) {
           $.ajax({
               type: "GET",

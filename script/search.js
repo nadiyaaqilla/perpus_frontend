@@ -20,11 +20,7 @@ $(document).ready(function () {
                 data: { search: newSearchTerm },
                 dataType: 'json',
                 success: function (response) {
-                    console.log('Success: ', response);
-
                     if (response && response.status === 200 && response.body && response.body.data) {
-                        console.log('Data: ', response.body.data);
-
                         // Assuming response.body.data contains the array of search results
                         $('#hasil-cari').empty(); // Clear existing content
 
@@ -54,7 +50,6 @@ $(document).ready(function () {
         } else {
             // Handle the case when the search term is empty
             // For example, you can load all data here
-            console.log('Empty search term. Loading all data...');
             // Make an AJAX request or load all data using a different method
         }
     });

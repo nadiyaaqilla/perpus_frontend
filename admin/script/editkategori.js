@@ -5,7 +5,6 @@ $(document).ready(function () {
   $("#edit_kategori").submit(function (e) {
     e.preventDefault();
     var formData = new FormData(this);
-    console.log(formData);
     var kode = $('#kode').val();
     $.ajax({
       type: "POST",
@@ -29,7 +28,6 @@ $(document).ready(function () {
 
 var urlParams = new URLSearchParams(window.location.search);
 var kode = urlParams.get('kode');
-console.log(kode);
 $.ajax({
   type: 'GET',
   url: host_be + "read_kategori_kode.php?kode=" + kode,
