@@ -1,4 +1,13 @@
 <?php 
+session_start();
+
+if(!isset($_SESSION['sudah_login'])){
+    header('location:login.php');
+}
+
+?>
+
+<?php 
 
 if (isset($_REQUEST['page']) && !empty($_REQUEST['page'])) {
     // Check if 'page' is a valid and expected value (add more conditions if needed)
@@ -61,10 +70,15 @@ if (isset($_REQUEST['page']) && !empty($_REQUEST['page'])) {
             style="padding-top: 0.75rem; padding-bottom: 0.75rem;font-size: 1rem;" href="#"><i
                 class="bi bi-shield-shaded"> </i>e-Perpus</a>
         <ul class="navbar-nav px-3">
-            <li class="nav-item text-nowrap">
+            <li class="nav-item text-nowrap ml">
                 <a class="nav-link" href="#">Admin</a>
             </li>
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="logout.php">Logout</a>
+            </li>
         </ul>
+            
+
     </nav>
 
     <div class="container-fluid">
