@@ -7,7 +7,7 @@ $.ajax({
     dataType: 'json',
     success: (result) => {
         // Clear existing options in the dropdown
-        $('#kode_kategori').empty();
+        // $('#kode_kategori').empty();
 
         // Add an empty/default option
         $('#kode_kategori').append('<option value="">Pilih Kategori</option>');
@@ -36,10 +36,10 @@ $('#insert-produk').submit(function(e){
         dataType: 'json',
         success: (result) => {
             alert(result.msg);
-            
+            window.location.href = "?page=dashboard";
         },
     });
-    window.location.href = "?page=dashboard";
+    
 });
 
 

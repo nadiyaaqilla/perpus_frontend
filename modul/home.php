@@ -36,7 +36,7 @@
       </div>
       <!-- button category -->
       <div class="row" id="home-kat">
-      <div class="col-lg-3 konten2 d-flex justify-content-around">
+      <!-- <div class="col-lg-3 konten2 d-flex justify-content-around"> -->
          
       </div>
    </div>
